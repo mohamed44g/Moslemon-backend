@@ -53,7 +53,7 @@ const loginUser = errorHandler(async (req, res, next) => {
     const accesstoken = jwt.sign(
       { id: ckeckUser._id, username: ckeckUser.username },
       process.env.SECRET_KEY,
-      { expiresIn: "1d" }
+      { expiresIn: "15d" }
     );
     const refreshToken = jwt.sign(
       { id: ckeckUser._id, username: ckeckUser.username },
